@@ -3,5 +3,5 @@
 <resources>
     <string name="app_name">Autostart service</string>
     <string name="boot_message">Boot Receiver</string>
-    <string name="service_message">Background Receiver</string>
+    <string name="service_message">Background Service</string>
 </resources>
