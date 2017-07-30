@@ -25,6 +25,10 @@
 
         <service android:name=".BackgroundIntentService" />
 
+        <service
+            android:name=".BackgroundJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+
     </application>
 
 </manifest>
