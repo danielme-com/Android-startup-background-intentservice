@@ -13,13 +13,14 @@ import android.widget.Toast;
 public class BackgroundJobService extends JobService {
 
     @Override
-    public boolean onStartJob(JobParameters params) {
+    public boolean onStartJob(final JobParameters params) {
         Log.d(this.getClass().getSimpleName(),"onStartJob");
         Handler mHandler = new Handler(getMainLooper());
         mHandler.post(new Runnable() {
             @Override
             public void run() {
                 Toast.makeText(getApplicationContext(),R.string.service_message, Toast.LENGTH_SHORT).show();
+                jobFinished(params, false);
             }
         });
 
